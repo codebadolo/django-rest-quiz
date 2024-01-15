@@ -24,7 +24,7 @@ class Question(models.Model):
     answer = models.OneToOneField('Answer', on_delete=models.CASCADE,
                                   related_name='correct_answer', null=True, blank=True)
     choices = models.ManyToManyField(Answer, related_name='choices')
-
+    
     def __str__(self):
         return self.question_text
 

@@ -25,3 +25,5 @@ class StartQuiz(APIView):
             raise Http404
         serializer = QuestionSerializer(quiz.question.all(), many=True)
         return  Response(serializer.data)
+
+#start doing  it 
